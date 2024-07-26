@@ -5,7 +5,6 @@ def displayPathtoPrincess(n,grid):
     m2 = None
     p1 = None
     p2 = None
-#print all the moves here
     for i in range(n):
         for j in range(n):
             if grid[i][j] == "m":
@@ -14,24 +13,20 @@ def displayPathtoPrincess(n,grid):
             elif grid[i][j] == "p":
                 p1 = i
                 p2 = j
-    if m1 != None and p1 != None and m2 != None and p2 != None:
-        if m1 != p1:
-            #print("not the same row")
-            if m1 < p1:
-                for i in range(abs(p1 - m1)):
-                    #print("you need to go down")
-                    print("DOWN") 
-            else:
-                for i in range(abs(p1 - m1)):
-                    #print("you need to go up")
-                    print("UP") 
-        if m2 != p2:
-            if m2 < p2:
-                for i in range(abs(p2 - m2)):
-                    print("RIGHT") 
-            else:
-                for i in range(abs(p2 - m2)):
-                    print("LEFT") 
+    if m1 != p1:
+        if m1 < p1:
+            for i in range(abs(p1 - m1)):
+                print("DOWN") 
+        else:
+            for i in range(abs(p1 - m1)):
+                print("UP") 
+    if m2 != p2:
+        if m2 < p2:
+            for i in range(abs(p2 - m2)):
+                print("RIGHT") 
+        else:
+            for i in range(abs(p2 - m2)):
+                print("LEFT") 
 
     
 
